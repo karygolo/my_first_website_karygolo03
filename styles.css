@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     /* Color de fondo del sitio web */
-    background-color: #ed98ed;
+    background-color: #EB97CA;
 }
 
 /* Estilos para el encabezado */
@@ -72,9 +72,10 @@ footer {
     /* Relleno interno del pie de página */
     padding: 1rem 0;
     /* Fija el pie de página en la parte inferior de la página */
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
+    
 }
 .introduction{
     text-align: center;
@@ -83,4 +84,7 @@ footer {
 .video{
     text-align: center;
     padding-bottom: 200px;
+}
+.background{
+    background-image: ;
 }
