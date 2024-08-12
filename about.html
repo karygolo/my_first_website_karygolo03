@@ -8,13 +8,13 @@
     <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Imnotkarygolo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
     <!-- STYLESHEET -->
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body background="logo.png">
+<body style="background-image: url('logo.png');">
     <!-- Sección de encabezado del sitio -->
     <header>
         <h1>Karygolo Portfolio</h1>
@@ -24,8 +24,13 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About me</a></li>
-            <li><a href="">About me</a></li>
-            <li><a href="https://www.instagram.com/imnotkarygolo/">Contact</a></li>
+            <li>
+                <a href="contact.html">Contact me</a>
+                <ul>
+                    <li><a href="https://www.instagram.com/imnotkarygolo/">Instagram</a></li>
+                    <li><a href="mailto:example@example.com">Email</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <!-- Contenido principal de la página -->
@@ -33,12 +38,17 @@
         <section>
             <div class="introduction">
                 <h2>¡HOLA! Soy karygolo</h2>
-                <p>Soy una diseñadora e ilustradora mexicana, tengo 21 años, mi mayor inspiración es el mundo que
-                     nos rodea agregandole un toque divertido a la vida </p>
+                <p>Soy una diseñadora e ilustradora mexicana, tengo 21 años, mi mayor inspiración es el mundo que nos rodea agregándole un toque divertido a la vida.</p>
             </div>
-            <img src="profile.jpeg" height="600 px" style="padding-bottom: 200 px;">
+            <div class="profile-container">
+                <img src="profile.jpeg" height="600px" >
+            </div>
+            
         </section>
     </main>
+    <div>
+        <h2 style="text-align: center;">Ahora te muestro las ultimas imagenes de diseños que he realizado </h2>
+    </div>
     <div class="slider-container">
         <!-- Contenedor de las imágenes -->
         <div class="slider-content">
@@ -55,29 +65,36 @@
                 <img src="imagen3.jpg" alt="Imagen 3">
             </div>
         </div>
+        <!-- Controles del slider -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let slideIndex = 0; // Inicializa el índice de las imágenes
+            let slideIndex = 1; // Inicializa el índice de las imágenes
 
             // Obtiene todas las imágenes del slider
             const slides = document.querySelectorAll(".slider-item");
-            const totalSlides = slides.length; // Calcula el número total de imágenes
 
             // Función para mostrar las imágenes del slider
-            function showSlides() {
+            function showSlide(n) {
+                if (n > slides.length) { slideIndex = 1; }
+                if (n < 1) { slideIndex = slides.length; }
+
                 slides.forEach(slide => {
                     slide.style.display = "none"; // Oculta todas las imágenes
                 });
 
-                slideIndex++; // Aumenta el índice de la imagen actual
-                if (slideIndex > totalSlides) { slideIndex = 1; } // Reinicia el índice si es mayor que el número total de imágenes
-
                 slides[slideIndex - 1].style.display = "block"; // Muestra la imagen actual
-                setTimeout(showSlides, 2000); // Cambia de imagen cada 2 segundos
             }
 
-            showSlides(); // Inicia la función para mostrar las imágenes
+            // Cambia la imagen actual del slider
+            window.changeSlide = function(n) {
+                slideIndex += n;
+                showSlide(slideIndex);
+            }
+
+            showSlide(slideIndex); // Muestra la primera imagen
         });
     </script>
     <!-- Pie de página del sitio -->

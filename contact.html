@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Especifica el tipo de documento y la versión de HTML -->
+    <meta charset="UTF-8">
+    <!-- Configura el viewport para que el sitio sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <title>Imnotkarygolo-Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<body style="background-image: url('logo.png');">
+    <!-- Sección de encabezado del sitio -->
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+    <!-- Barra de navegación con enlaces -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li>
+                <a href="contact.html">Contact me</a>
+                <ul>
+                    
+                    <li><a href="https://www.instagram.com/imnotkarygolo/">Instagram</a></li>
+                    <li><a href="https://wa.me/5216183032119">WhatssApp</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- Contenido principal de la página -->
+    <main>
+       
+    </main>
+    <div>
+        <div>
+            <h3 style="text-align: center;">
+                Escucha mi nueva canción favorita <3
+            </h3>
+        </div>
+        <div style="text-align: center;">
+            <iframe 
+                id="spotifyPlayer"
+                src="https://open.spotify.com/embed/track/2Zo1PcszsT9WQ0ANntJbID" 
+                width="300" 
+                height="380" 
+                frameborder="0" 
+                allowtransparency="true" 
+                allow="autoplay; encrypted-media">
+            </iframe>
+        </div>
+    </div>
+    
+    
+
+    <script>
+        // Obtener el elemento iframe
+        const spotifyPlayer = document.getElementById('spotifyPlayer');
+
+        // Esperar a que la página esté completamente cargada
+        window.onload = function() {
+            // Intentar reproducir el audio (esto puede ser bloqueado por el navegador)
+            spotifyPlayer.contentWindow.postMessage({method: 'play'}, '*');
+        };
+    </script>
+    <!-- Pie de página del sitio -->
+    <footer>
+        <p>&copy; 2024 My first website</p>
+    </footer>
+</body>
+</html>
