@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- STYLESHEET -->
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -17,46 +18,67 @@
 </head>
 <body style="background-image: url('logo.png');">
     <!-- Sección de encabezado del sitio -->
-    <header>
-        <h1>Contact Me</h1>
+    <header class="container-fluid bg-light p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="mb-0">Portafolio de Karygolo</h1>
+            <a href="index.html">
+                <img src="./images/logopng.png" alt="Logo Karygolo" style="width: 100px; height: 100px;">
+            </a>
+        </div>
     </header>
     <!-- Barra de navegación con enlaces -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About me</a></li>
-            <li>
-                <a href="contact.html">Contact me</a>
-                <ul>
-                    
-                    <li><a href="https://www.instagram.com/imnotkarygolo/">Instagram</a></li>
-                    <li><a href="https://wa.me/5216183032119">WhatssApp</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="contact.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Contact me
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.instagram.com/imnotkarygolo/">Instagram</a></li>
+                            <li><a class="dropdown-item" href="https://wa.me/5216183032119">Whatsapp</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
+            </div>
+        </div>
     </nav>
     <!-- Contenido principal de la página -->
     <main>
-       
-    </main>
-    <div>
         <div>
-            <h3 style="text-align: center;">
-                Escucha mi nueva canción favorita <3
-            </h3>
+            <div>
+                <h3 style="text-align: center;">
+                  <p>Si te gusto mi trabajo me puedes contactar en mis redes sociales toca contact me
+                    </p> 
+                    <p>Por cierto escucha mi nueva canción favorita para diseñar</p>
+                </h3>
+            </div>
+            <div style="text-align: center;">
+                <iframe 
+                    id="spotifyPlayer"
+                    src="https://open.spotify.com/embed/track/2Zo1PcszsT9WQ0ANntJbID" 
+                    width="300" 
+                    height="380" 
+                    frameborder="0" 
+                    allowtransparency="true" 
+                    allow="autoplay; encrypted-media">
+                </iframe>
+            </div>
         </div>
-        <div style="text-align: center;">
-            <iframe 
-                id="spotifyPlayer"
-                src="https://open.spotify.com/embed/track/2Zo1PcszsT9WQ0ANntJbID" 
-                width="300" 
-                height="380" 
-                frameborder="0" 
-                allowtransparency="true" 
-                allow="autoplay; encrypted-media">
-            </iframe>
-        </div>
-    </div>
+    </main>
+    
     
     
 

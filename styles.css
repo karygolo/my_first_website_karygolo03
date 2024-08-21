@@ -1,183 +1,114 @@
 /* Estilos globales para el cuerpo del documento */
 body {
-    /* Tipo de letra utilizado */
     font-family: "Montserrat", sans-serif;
-    /* Elimina los márgenes y el relleno por defecto */
     margin: 0;
     padding: 0;
-    /* Color de fondo del sitio web */
-    background-color: #EB97CA;
-    <style>
-    /* Estilos para el contenedor principal del slider */
-    .slider-container {
-        max-width: 800px; /* Ancho máximo del slider */
-        margin: 0 auto; /* Centra el slider horizontalmente */
-        position: relative; /* Posición relativa para los elementos internos */
-        overflow: hidden; /* Oculta cualquier contenido que sobresalga del contenedor */
-    }
-    /* Estilos para el contenedor de las imágenes */
-    .slider-content {
-        display: flex; /* Utiliza flexbox para alinear las imágenes horizontalmente */
-        transition: transform 0.5s ease; /* Transición suave al cambiar las imágenes */
-    }
-    /* Estilos para cada imagen del slider */
-    .slider-item {
-        min-width: 100%; /* Cada imagen ocupa al menos el ancho completo del contenedor */
-        flex: 0 0 auto; /* Permite que las imágenes mantengan su tamaño original */
-    }
-</style>
+    background-color: #EB97CA; /* Color de fondo */
+}
 
-} 
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #EB97CA; /* Mismo color que el fondo del body */
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    padding: 0; /* Elimina el relleno interno */
+    margin: 0; /* Elimina los márgenes */
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none; /* Elimina el estilo de lista por defecto */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav li {
+    position: relative;
+}
+
+.navbar-nav li a {
+    display: block;
+    color: #000000;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar-nav li a:hover {
+    background-color: #EB97CA;
+}
+
+/* Estilos para el menú desplegable */
+.navbar-nav li ul {
+    display: none;
+    position: absolute;
+    background-color: #EB97CA;
+    padding: 0;
+}
+
+.navbar-nav li:hover ul {
+    display: block;
+}
+
+.navbar-nav li ul li {
+    width: 200px;
+}
+
+.navbar-nav li ul li a {
+    padding: 10px;
+}
 
 /* Estilos para el encabezado */
 header {
     font-family: "Gabarito", sans-serif;
-    /* Color de fondo del encabezado */ 
-    background-color: #fffbf1;
-    /* Color del texto en el encabezado */
+    background-color: #EB97CA;
     color: #000000;
-    /* Relleno interno del encabezado */
     padding: 1rem 0;
-    /* Alineación del texto en el centro */
     text-align: center;
-}
-
-/* Estilos para la barra de navegación */
-nav ul {
-    /* Elimina el estilo de lista por defecto */
-    list-style: none;
-    /* Elimina el relleno interno */
-    padding: 0;
-    /* Alineación del texto en el centro */
-    text-align: center;
-    /* Color de fondo de la barra de navegación */
-    background-color: #444;
-    /* Elimina los márgenes */
-    margin: 0;
-}
-
-/* Estilos para los elementos de la lista en la barra de navegación */
-nav ul li {
-    /* Muestra los elementos en línea */
-    display: inline;
-    /* Elimina los márgenes */
-    margin: 0;
-}
-
-/* Estilos para los enlaces en la barra de navegación */
-nav ul li a {
-    /* Color del texto del enlace */
-    color: #fff;
-    /* Relleno interno del enlace */
-    padding: 0.5rem 1rem;
-    /* Elimina el subrayado por defecto */
-    text-decoration: none;
 }
 
 /* Estilos para el contenido principal */
 main {
-    /* Relleno interno del contenido principal */
     padding: 1rem;
 }
 
 /* Estilos para el pie de página */
 footer {
     font-family: "Oswald", sans-serif;
-    /* Color de fondo del pie de página */
     background-color: #333;
-    /* Color del texto en el pie de página */
     color: #fff;
-    /* Alineación del texto en el centro */
     text-align: center;
-    /* Relleno interno del pie de página */
     padding: 1rem 0;
-    /* Fija el pie de página en la parte inferior de la página */
     position: relative;
     bottom: 0;
     width: 100%;
-    
-}
-.introduction{
-    text-align: center;
-    padding-bottom: 100px;
-}
-.video{
-    text-align: center;
-    padding-bottom: 200px;
-}
-.background{
-    background-image: ;
-}
-nav {
-    background-color: #333;
-    display: flex;
-    justify-content: center;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #575757;
-}
-
-/* Estilos para el menú desplegable */
-nav ul li ul {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    padding: 0;
-}
-
-nav ul li:hover ul {
-    display: block;
-}
-
-nav ul li ul li {
-    width: 200px;
-}
-
-nav ul li ul li a {
-    padding: 10px;
-}
-/* Estilos para el contenedor del slider */
+/* Estilos para el slider */
 .slider-container {
+    max-width: 800px;
+    margin: 0 auto;
     position: relative;
-    max-width: 600px;
-    margin: auto;
     overflow: hidden;
-    
 }
 
-/* Estilos para los ítems del slider */
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
 .slider-item {
-    display: none;
-    width: 100%;
-    height: 100%; /* Hacer que las imágenes llenen el contenedor del slider */
+    min-width: 100%;
+    flex: 0 0 auto;
 }
 
 .slider-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin distorsión */
+    object-fit: cover;
 }
 
-/* Estilos para los botones de navegación */
+/* Estilos para los botones de navegación del slider */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -185,7 +116,7 @@ nav ul li ul li a {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
+    color: EB97CA;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -203,19 +134,55 @@ nav ul li ul li a {
     border-radius: 3px 0 0 3px;
 }
 
-/* Estilos para los botones al pasar el ratón */
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 /* Estilos para el contenedor del perfil */
 .profile-container {
-    text-align: center; /* Centra el contenido del contenedor */
-    padding-bottom: 200px; /* Ajusta el espacio inferior según sea necesario */
+    text-align: center;
+    padding-bottom: 200px;
 }
 
-/* Estilos para la imagen del perfil */
 .profile-image {
-    display: inline-block; /* Asegura que la imagen no ocupe el 100% del contenedor */
-    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para la galería de imágenes en el portafolio */
+.card {
+    overflow: hidden; /* Oculta el contenido desbordado */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin distorsión */
+    transition: transform 0.3s ease-in-out, object-fit 0.3s ease-in-out; /* Transición suave */
+}
+
+.card-img-top:hover {
+    transform: scale(1.5); /* Aumenta el tamaño de la imagen */
+    object-fit: contain; /* Muestra la imagen completa sin recortar */
+    z-index: 2; /* Asegura que la imagen se muestre por encima de otros elementos */
+}
+.introduction {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.text-container {
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+.introduction img {
+    max-height: 400px; /* Ajusta el tamaño máximo de la imagen */
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen */
+    margin-right: 100px; /* Espacio entre el texto y la imagen */
+}
+
+.introduction h2 {
+    margin-bottom: 1rem; /* Espacio debajo del título */
 }
